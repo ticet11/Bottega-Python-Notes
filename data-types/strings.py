@@ -270,7 +270,7 @@ print(query)
 sentence = 'The quick brown fox jumps over the quick dog.'
 
 # Takes string to be replaced, followed by string to replace
-## replaces all instances of the substring you've indicated
+# replaces all instances of the substring you've indicated
 sentence = sentence.replace('quick', 'ugly')
 
 print(sentence)
@@ -311,7 +311,7 @@ print(url.lstrip('https://').rstrip('.com').title())
 heading = 'Python: An Introduction'
 
 # .partition() takes the breakpoint as the variable
-## will only account for the first instance of the variable in the string
+# will only account for the first instance of the variable in the string
 header, _, subheader = heading.partition(': ')
 
 print(header)
@@ -320,3 +320,40 @@ print(subheader)
 
 heading = f'{header} {subheader}'
 print(heading)
+
+# storing the partition output into a variable
+heading = 'Python: An Introduction'
+x = heading.partition(': ')
+
+# prints a tuple with 3 elements
+print(x)
+
+##################
+# split function #
+##################
+
+tags_string = 'python,coding,programming,development'
+
+# Splits at the variable passed through, the comma in this example.
+tags_list = tags_string.split(',')
+
+print(tags_list)
+
+# No variable passed through simply converts 
+# your string into a list with the string as the only element.
+tags_list = tags_string.split()
+
+print(tags_list)
+
+#################################################################
+# Check if string represents numbers or alphanumeric characters #
+#################################################################
+
+api_data = '5'
+greeting = 'Hello'
+
+print(api_data.isalpha()) # returns False, string is a number
+print(greeting.isalpha()) # returns true, string is alphanumeric
+
+print(api_data.isnumeric()) # returns True, the string is a number
+print(greeting.isnumeric()) # returns False, string is alphanumeric

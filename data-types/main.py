@@ -21,13 +21,17 @@ float = 36.0
 
 # Lists - ~Arrays
 x = [2, 3, 4]
+#
 
 # Tuples - ~Arrays with parenthesis
 x = (2, 3, 4)
+# Good for deconstruction
 
 # Sets -
 
 # Dictionaries - Key value pairs
+butt = 1
+mud = 4
 x = {butt: 2, mud: 3}
 
 ############
