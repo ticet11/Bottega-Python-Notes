@@ -188,3 +188,135 @@ print(repr(content))
 long_string = "\nSo far in this section about string's we've focused on strings\nsuch as words and single line sentences. \n \nHowever, there are also times when you're going to have to work\nwith multi-line strings and that's what we're going to discuss\nin this guide and multi-line strings in programming typically\nare called `Heredocs` and just so you can see exactly how \nthat's spelled and how you'd use it.\n"
 
 print(long_string)
+
+#################
+# Interpolation #
+#################
+
+name = 'Kristine'
+# takes python code inside curly brackets, in this case an applicable variable.
+# f prefix makes the line expect curly brackets
+greeting = f'Hi, {name}'
+
+print(greeting)
+
+# Escaping {} to include
+name = 'Kristine'
+# Double brackets allow you to print the single set of brackets along with the string
+greeting = f'{name} really likes these {{brackets}}'
+
+print(greeting)
+
+# Index based String Interpolation
+
+name = 'Kristine'
+age = 12
+product = 'Python eLearning course'
+
+# Ugly old way to know about
+
+greeting = 'Product Purchase: {2} - Hi {0}, you are listed as {1} years old. - {3}'.format(
+    name, age, product, 'Jordan')
+
+print(greeting)
+
+# Clean new way to be using.
+
+from_name = 'Jordan'
+
+greeting = f'Product Purchase: {product} - Hi {name}, you are listed as {age} years old. - {from_name}'
+
+print(greeting)
+
+#######################
+# Finding a Substring #
+#######################
+
+sentence = 'The quick brown fox jumps over the lazy dog.'
+
+query = sentence.find('quick')
+
+# returns the index at which the substring starts.
+print(query)
+
+query = sentence.index('quick')
+
+# returns the same index at which the substring starts
+print(query)
+
+query = sentence.find('oof')
+
+# returns a -1 when not found.
+print(query)
+
+# query = sentence.index('oof')
+
+# ## returns an error when not found
+# print(query)
+
+# returning boolean on whether substring is found in string.
+query = 'fox' in sentence
+
+print(query)
+
+query = 'oof' in sentence
+
+print(query)
+
+##################################
+# Find and Replace String Values #
+##################################
+
+sentence = 'The quick brown fox jumps over the quick dog.'
+
+# Takes string to be replaced, followed by string to replace
+## replaces all instances of the substring you've indicated
+sentence = sentence.replace('quick', 'ugly')
+
+print(sentence)
+
+##################
+# Negative Index #
+##################
+
+sentence = 'The quick brown fox jumps over the lazy dog.'
+
+# [-1] would indicate the final character in the string
+# [-2] = g
+print(sentence[-1])
+
+# range would still go front to back, so this will slice the last 4 characters and return.
+print(sentence[-4:])
+
+#########################
+# strip, lstrip(), and rstrip() #
+#########################
+
+# strip the outside space
+url = '    https://google.com       '
+print(url.strip())
+
+# strip a specific substring
+url = 'https://google.com'
+print(url.strip('https://'))
+
+# utilizing lstrip, rstrip, and title to print 'Google'
+url = 'https://google.com'
+print(url.lstrip('https://').rstrip('.com').title())
+
+######################
+# Partition function #
+######################
+
+heading = 'Python: An Introduction'
+
+# .partition() takes the breakpoint as the variable
+## will only account for the first instance of the variable in the string
+header, _, subheader = heading.partition(': ')
+
+print(header)
+
+print(subheader)
+
+heading = f'{header} {subheader}'
+print(heading)
