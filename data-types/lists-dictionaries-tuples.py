@@ -188,6 +188,22 @@ sorted_prices = sorted(sale_prices)
 print(sorted_prices)
 print(sale_prices)
 
+#############################
+# Find the Median challenge #
+#############################
+
+sale_prices = [
+    100, 83, 220, 40, 100, 400, 10, 1, 3
+]
+
+sale_prices.sort()
+print(sale_prices)
+
+sale_price_range_length = len(sale_prices)
+median = sale_prices[int(sale_price_range_length/2)]
+
+print(median)
+
 # # Dictionary
 # car_dictionary = {
 #     first_car: "Toyota Prius",
