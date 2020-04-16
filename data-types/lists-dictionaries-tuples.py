@@ -156,6 +156,25 @@ print(tag_range)
 tag_range = tags[:]
 print(tag_range)
 
+tags = ['python', 'development', 'tutorials', 'code', 'programming', 'computer science']
+
+# Grab every other element, starting with the first.
+tag_range = tags[::2]
+print(tag_range)
+
+# Reverse the range.
+## If you tried to use sort(reverse=True), you would end up with reverse alphabetical/numerical
+tag_range = tags[::-1]
+print(tag_range)
+
+tag_range.sort(reverse=True)
+print(tag_range)
+
+## .sort() can not be stored. It returns a value of 'none'.
+sorted_tags = tags.sort(reverse=True)
+print(sorted_tags)
+
+
 # # Dictionary
 # car_dictionary = {
 #     first_car: "Toyota Prius",
