@@ -44,3 +44,12 @@ print(sabres)
 teams['Lightening'] = ["Price", 'Betts']
 
 print(teams)
+
+####################################
+# Configure Fallback Lookup Values #
+####################################
+
+# .get() provides a fallback, to avoid errors, in case key does not exist.
+featured_team = teams.get('mets', 'Not a thing, buddy.')
+
+print(featured_team)
