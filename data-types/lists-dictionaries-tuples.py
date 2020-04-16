@@ -1,8 +1,8 @@
-##############
-# The Basics #
-##############
+#####################
+# Lists: The Basics #
+#####################
 
-# Lists
+# Lists Example
 car_list = ["Toyoto Prius", "Toyota Celica", "Ford Mustang", "VW Bug"]
 
 print(car_list)
@@ -26,6 +26,28 @@ print([car_list[2]])
 ## reassign an index to a new value
 car_list[4] = "Chevy Camero"
 print(car_list)
+
+###############################
+# Remove Elements from a List #
+###############################
+
+users = ['Jan', 'Brian', 'Beth', 'Brian', 'Brian']
+
+print(users)
+
+## Will remove first instance
+users.remove('Brian')
+
+print(users)
+
+## .pop() removes last element in list and can return the popped element
+popped_user = users.pop()
+
+print(users)
+print(popped_user)
+
+del users[2]
+print(users)
 
 # # Dictionary
 # car_dictionary = {
