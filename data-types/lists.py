@@ -192,17 +192,45 @@ print(sale_prices)
 # Find the Median challenge #
 #############################
 
-sale_prices = [
-    100, 83, 220, 40, 100, 400, 10, 1, 3
-]
+# Go to median-challenge.py in this same folder.
 
-sale_prices.sort()
-print(sale_prices)
+###############
+# slice Class #
+###############
 
-sale_price_range_length = len(sale_prices)
-median = sale_prices[int(sale_price_range_length/2)]
+tags = ['python', 'development', 'tutorials', 'code', 'programming']
 
-print(median)
+## Storing a slice, so it can be used throughout a program
+slice_obj = slice(1, 4, 2)
+
+print(slice_obj)
+print(tags[slice_obj])
+
+print(slice_obj.start)
+print(slice_obj.stop)
+print(slice_obj.step)
+
+###############
+# Add to list #
+###############
+
+tags = ['python', 'development', 'tutorials', 'code']
+
+# In Place
+## Adds each letter in the string individually
+tags.extend('Programming')
+print(tags)
+
+## Adds the full string as a single item to the list
+tags.extend(['Programming'])
+print(tags)
+
+# New List
+new_tags = tags + ['Programming']
+
+print(new_tags)
+
+print(tags)
 
 # # Dictionary
 # car_dictionary = {

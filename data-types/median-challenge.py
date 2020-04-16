@@ -22,5 +22,4 @@ def get_median():
         median = sale_prices[int(sale_price_range_length/2)]
         print(f'{median} is the median')
 
-print("Wow, buddy, thanks. I'm gonna calculate this up and get that right out to you.")
-get_median()
+# get_median()
