@@ -170,10 +170,23 @@ print(tag_range)
 tag_range.sort(reverse=True)
 print(tag_range)
 
-## .sort() can not be stored. It returns a value of 'none'.
+## .sort() can not be stored (edits previous data, does not create anything new). 
+# It returns a value of 'none'.
 sorted_tags = tags.sort(reverse=True)
 print(sorted_tags)
 
+sale_prices = [
+    100, 83, 220, 40, 100, 400, 10, 1, 3
+]
+
+## .sort() has changed the original content
+# sale_prices.sort()
+# print(sale_prices)
+
+## .sorted() will return a new value without altering the previous content.
+sorted_prices = sorted(sale_prices)
+print(sorted_prices)
+print(sale_prices)
 
 # # Dictionary
 # car_dictionary = {
