@@ -10,3 +10,28 @@ title, sub_heading, content = post
 print(title)
 print(sub_heading)
 print(content)
+
+print(id(title))
+##############################
+# Adding Elements to a Tuple #
+##############################
+
+post = ('Python Basics', 'Intro guide to python', 'Some cool python content')
+
+print(id(post))
+
+# The ',' is essential when combining tuples!
+post += ('Wengus',)
+
+print(id(post))
+
+
+
+title, sub_heading, content, status = post
+
+print(id(title))
+
+print(title)
+print(sub_heading)
+print(content)
+print(status)
