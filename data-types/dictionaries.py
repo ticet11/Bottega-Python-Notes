@@ -53,3 +53,40 @@ print(teams)
 featured_team = teams.get('mets', 'Not a thing, buddy.')
 
 print(featured_team)
+
+###########################
+# Dictionary View Objects #
+###########################
+
+players = {
+  "ss" : "Correa",
+  "2b" : "Altuve",
+  "3b" : "Bregman",
+  "DH" : "Gattis",
+  "OF" : "Springer",
+}
+
+# Makes working on the dictionary "Thread Safe" by creating a seperate instance of the dictionary
+player_names = list(players.copy().values())
+print(player_names)
+
+# Key/ Value pairs can be returned as a "list", which can not be indexed.
+# Dynamic, so if something changes in the dictionary, it will effect the view
+print(players.values())
+
+# Converts the value to a list, so it can be worked with in that manner.
+print(list(players.values()))
+
+teams = {
+  "astros" : ["Altuve", "Correa", "Bregman"],
+  "angels" :  ["Trout", "Pujols"],
+  "yankees": ["Judge", "Stanton"],
+  "red sox": ["Price", "Betts"],
+}
+
+team_groupings = teams.items()
+
+print(len(team_groupings))
+
+# Retreaving nested information
+print(list(team_groupings)[1][1][1])

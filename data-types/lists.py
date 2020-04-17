@@ -216,7 +216,7 @@ print(slice_obj.step)
 
 tags = ['python', 'development', 'tutorials', 'code']
 
-# In Place
+# In Place (edits the original list)
 ## Adds each letter in the string individually
 tags.extend('Programming')
 print(tags)
@@ -225,19 +225,9 @@ print(tags)
 tags.extend(['Programming'])
 print(tags)
 
-# New List
+# Copy (makes a New List)
 new_tags = tags + ['Programming']
 
 print(new_tags)
 
 print(tags)
-
-# # Dictionary
-# car_dictionary = {
-#     first_car: "Toyota Prius",
-#     second_car: "Toyota Avalon",
-#     future_car_one: "Ford Mustang",
-#     future_car_two: "VW Bus"
-# }
-
-# # Tuple
