@@ -11,7 +11,6 @@ print(title)
 print(sub_heading)
 print(content)
 
-print(id(title))
 ##############################
 # Adding Elements to a Tuple #
 ##############################
@@ -25,13 +24,21 @@ post += ('Wengus',)
 
 print(id(post))
 
-
-
 title, sub_heading, content, status = post
-
-print(id(title))
 
 print(title)
 print(sub_heading)
 print(content)
 print(status)
+
+##########################
+# Lists Nested in Tuples #
+##########################
+
+post = ('Python Basics', 'Intro guide to Python', 'Some cool python content')
+
+tags = ['python', 'coding', 'tutorial']
+
+post += (tags,)
+
+print(post[-1][1])
