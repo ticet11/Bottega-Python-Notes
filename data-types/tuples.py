@@ -55,17 +55,50 @@ print(post[1::2])
 # Remove Elements #
 ###################
 
-post = ('Python Basics', 'Intro guide to Python', 'Some cool python content', 'published')
+# post = ('Python Basics', 'Intro guide to Python', 'Some cool python content', 'published')
 
-# Removing elements from end
-post = post[:-1]
+# # Removing elements from end
+# post = post[:-1]
 
-# Removing elements from beginning
-post = post[1:]
+# # Removing elements from beginning
+# post = post[1:]
 
-# Removing specific element (messy/not recommended)
-post = list(post)
-post.remove('published')
-post = tuple(post)
+# # Removing specific element (messy/not recommended)
+# post = list(post)
+# post.remove('published')
+# post = tuple(post)
 
-print(post)
+# print(post)
+
+###########################
+# Tuple as Dictionary Key #
+###########################
+
+priority_index = {
+  (1, 'premier'): [1, 34, 12],
+  (1, 'mvp'): [84, 22, 24],
+  (2, 'standard'): [93, 81, 3],
+}
+
+print(list(priority_index.keys()))
+
+def top_items(priority_index):
+    top_items_dic = {}
+    for key, value in priority_index.items():
+        if key[0] > 1:
+            top_items_dic[key] = value
+    return top_items_dic
+
+print(top_items(priority_index))
+
+##################################
+# Guide to Python's Zip Function #
+##################################
+
+positions = ['2b', '3b', 'ss', 'dh']
+players = ['Altuve', 'Bregman', 'Correa', 'Gattis']
+
+# creates a new list of tuples from input lists
+scoreboard = zip(positions, players)
+
+print(list(scoreboard))
