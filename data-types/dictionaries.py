@@ -90,3 +90,19 @@ print(len(team_groupings))
 
 # Retreaving nested information
 print(list(team_groupings)[1][1][1])
+
+##################################
+# Deleting Items in a Dictionary #
+##################################
+
+teams = {
+  "astros" : ["Altuve", "Correa", "Bregman"],
+  "angels" :  ["Trout", "Pujols"],
+  "yankees": ["Judge", "Stanton"],
+  "red sox": ["Price", "Betts"],
+}
+
+removed_team = teams.pop('yanks', "That's not even a team.")
+
+print(teams)
+print(removed_team)
