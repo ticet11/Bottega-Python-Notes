@@ -42,3 +42,11 @@ tags = ['python', 'coding', 'tutorial']
 post += (tags,)
 
 print(post[-1][1])
+
+####################
+# Slices in tuples #
+####################
+
+post = ('Python Basics', 'Intro guide to Python', 'Some cool python content')
+
+print(post[1::2])
