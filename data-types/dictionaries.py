@@ -106,3 +106,33 @@ removed_team = teams.pop('yanks', "That's not even a team.")
 
 print(teams)
 print(removed_team)
+
+################################
+# Lists of nested dictionaries #
+################################
+
+teams = [
+    {
+        'astros': {
+            '2B' : 'Altuve',
+            'SS' : 'Correa',
+            '3B' : 'Bregman'
+        },
+    },
+    {
+        'angels': {
+            'OF' : 'Trout',
+            'DH' : 'Pujols'
+        }
+    }
+]
+
+print(teams)
+
+print(teams[1])
+
+angels = teams[1].get('angels', 'Not even a team')
+
+print(angels)
+
+print(list(angels.values())[1])
