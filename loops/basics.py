@@ -115,3 +115,29 @@ cubed_nums = [num ** 3 for num in num_list]
 print(list(num_list))
 print(cubed_nums)
 
+# even_numbers = []
+
+# The old way
+for num in num_list:
+  if num % 2 == 0:
+    even_numbers.append(num)
+
+# Not very cute, but effective and with less code.
+even_numbers = [num for num in num_list if num % 2 == 0]
+
+print(even_numbers)
+
+list_of_numbers = [9, 3, 5, 2, 1, 0, 11]
+
+# Old Way
+doubled_numbers = []
+
+for num in list_of_numbers:
+    doubled_numbers.append(num *2)
+
+print(doubled_numbers)
+
+# Cute way
+doubled_numbers = [num * 2 for num in list_of_numbers]
+
+print(doubled_numbers)
