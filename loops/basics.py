@@ -72,18 +72,18 @@ nums = list(range(1, 100))
 while len(nums) > 0:
   print(nums.pop())
 
-# def guessing_game():
-#   while True:
-#     print('What is your guess?')
-#     guess = input()
+def guessing_game():
+  while True:
+    print('What is your guess?')
+    guess = input()
 
-#     if guess == '42':
-#       print('Correct!')
-#       return False
-#     else:
-#       print(f'No go, buddy. {guess} is wrong. Try again.')
+    if guess == '42':
+      print('Correct!')
+      return False
+    else:
+      print(f'No go, buddy. {guess} is wrong. Try again.')
 
-# guessing_game()
+guessing_game()
 
 #############################
 # Combine and Flatten Lists #
@@ -96,3 +96,22 @@ for legacy_customer in legacy_customers:
   new_customers.append(legacy_customers)
 
 print(new_customers)
+
+######################
+# List Comprehension #
+######################
+
+num_list = range(1, 11)
+# cubed_nums = []
+
+# The old way
+# for num in num_list:
+#     cubed_nums.append(num ** 3)
+
+# The cute way.
+# creates the new variable and builds the variable in one line.
+cubed_nums = [num ** 3 for num in num_list]
+
+print(list(num_list))
+print(cubed_nums)
+
