@@ -30,3 +30,23 @@ def counter(max_value):
 
 
 counter(501)
+
+#####################
+# Returning a value #
+#####################
+
+# return creates usable data. 
+# Your complex programs will not use the terminal as an interface,
+# so you will not need the final product to print to the terminal.
+# You will need to create data, accessible by the UI.
+def full_name(first, last):
+  return f'{first} {last}'
+
+
+kristine = full_name('Kristine', 'Hudgens')
+
+def greeting(name):
+  print(f'Hi {name}!')
+
+
+greeting(kristine)
