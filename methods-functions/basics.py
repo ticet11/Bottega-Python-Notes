@@ -125,3 +125,16 @@ def greeting(time_of_day, *args):
 
 greeting('Afternoon', 'Kristine', 'M', 'Hudgens')
 greeting('Morning', 'Tiffany', 'Hudgens')
+
+#####################
+# Keyword Arguments #
+#####################
+
+def greeting(**kwargs):
+    if kwargs:
+        print(f"Hi, {kwargs['first_name']} {kwargs['last_name']}, what it do?")
+    else:
+        print('Hello, stranger. You are not welcome.')
+
+greeting(first_name = 'Jengus', last_name = 'Khan')
+greeting()
