@@ -138,3 +138,21 @@ def greeting(**kwargs):
 
 greeting(first_name = 'Jengus', last_name = 'Khan')
 greeting()
+
+##########################
+# Combine Argument Types #
+##########################
+
+def greeting(time_of_day, *args, **kwargs):
+    print(f"Hi, {' '.join(args)}, I hope you will bee cool this {time_of_day}")
+
+    if kwargs:
+        print('Your tasks for the day are:')
+        for key, value in kwargs.items():
+            print(f"{key} => {value}")
+
+greeting('morning', 
+         'Brian', 'Michael', 'Kozub',
+          first = 'Wash Dishes',
+          second = 'Be good',
+          third = 'Start again')
