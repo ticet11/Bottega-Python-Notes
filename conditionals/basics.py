@@ -40,3 +40,35 @@ print(f'This user {auth}.')
 auth = 'can access' if role == 'admin' else 'cannot access'
 
 print(f'This user {auth}.')
+
+#########################
+# Conditional Operators #
+#########################
+
+# List of comparison operators
+# == Equality
+# != Inequality
+# <> Inequality (deprecated)
+# >  Greater than
+# >= Greater than or equal to
+# < Less than
+# <= Less than or equal to
+
+username = 'jonsnow'
+
+if username == 'jonsnow':
+  print('Welcome Jon')
+else:
+  print('You shall not pass!')
+
+age = 25
+
+if age <= 25:
+  print(f"I'm sorry, you need to be at least 25 years old")
+
+# Comparing lists
+users = ['Kris', 'Jan']
+users_2 = ['Kris', 'Jan']
+
+if users == users_2:
+    print('Wow, same.')
