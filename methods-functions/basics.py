@@ -83,3 +83,45 @@ def some_function(collection = []):
 
 print(some_function())
 print(some_function())
+
+############################
+# Named function arguments #
+############################
+
+def full_name(first, last):
+  print(f'{first} {last}')
+
+
+full_name('Kristine', 'Hudgens')
+full_name(first = 'Kristine', last = 'Hudgens')
+full_name(last = 'Hudgens', first = 'Kristine')
+
+######################
+# Argument Unpacking #
+######################
+
+# Allows you to take multiple arguments in at a time,
+# without stating them in the function.
+# creates a tuple.  
+def greeting(*args):
+  print('Hi ' + ' '.join(args))
+
+
+greeting('Kristine', 'M', 'Hudgens')
+greeting('Tiffany', 'Hudgens')
+
+# args is best practice, but not required
+def greeting(*names):
+  print('Hi ' + ' '.join(names))
+
+
+greeting('Kristine', 'M', 'Hudgens')
+greeting('Tiffany', 'Hudgens')
+
+# combining argument types.
+def greeting(time_of_day, *args):
+  print(f"Hi {' '.join(args)}, I hope that you're having a good {time_of_day}")
+
+
+greeting('Afternoon', 'Kristine', 'M', 'Hudgens')
+greeting('Morning', 'Tiffany', 'Hudgens')
