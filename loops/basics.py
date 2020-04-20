@@ -61,3 +61,26 @@ for username in usernames:
     print(f'{username} was found at index {usernames.index(username)}')
     break
   print(username)
+
+###############
+# While Loops #
+###############
+
+# Must be told expicitly to stop looping.
+nums = list(range(1, 100))
+
+while len(nums) > 0:
+  print(nums.pop())
+
+def guessing_game():
+  while True:
+    print('What is your guess?')
+    guess = input()
+
+    if guess == '42':
+      print('Correct!')
+      return False
+    else:
+      print(f'No go, buddy. {guess} is wrong. Try again.')
+
+guessing_game()
