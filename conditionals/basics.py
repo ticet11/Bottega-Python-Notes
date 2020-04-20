@@ -21,3 +21,22 @@ elif age > 100:
   print(f"I'm sorry, {age} is over 100 years old")
 else:
   print(f"You're good to go, {age} fits in the range to rent a car")
+
+####################
+# Ternary Operator #
+####################
+
+role = 'admin'
+
+# Old way
+if role == 'admin':
+    auth = 'can access'
+else:
+    auth = 'can not access'
+
+print(f'This user {auth}.')
+
+# cute way
+auth = 'can access' if role == 'admin' else 'cannot access'
+
+print(f'This user {auth}.')
