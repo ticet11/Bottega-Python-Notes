@@ -72,3 +72,23 @@ users_2 = ['Kris', 'Jan']
 
 if users == users_2:
     print('Wow, same.')
+
+#########################################
+# Check for value inside string or list #
+#########################################
+
+sentence = 'The quick brown fox jumps over the lazy Dog'
+word = 'dog'
+
+if word.lower() in sentence.lower():
+  print('The word is in the sentence')
+else:
+  print('The word is not in the sentence')
+
+
+nums = [1, 2, 3, 4]
+
+if 3 in nums:
+  print('The number was found')
+else:
+  print('The number was not found')
