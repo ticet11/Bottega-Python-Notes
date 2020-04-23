@@ -15,4 +15,3 @@ inv = Invoice('Google', 500)
 print(str(inv))
 print(repr(inv))
 
-# __init__
